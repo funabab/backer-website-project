@@ -6,7 +6,7 @@
     "./workspaces/frontend"
   ],
   "scripts": {
-    "dev": "npm run dev -ws --if-present",
+    "dev": "concurrently \"npm run dev -w @workspace/backend\" \"npm run dev -w @workspace/frontend\"",
     "build": "npm run build -ws --if-present"
   },
   "author": {
@@ -15,6 +15,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^7.0.0",
     "prettier": "^2.5.1"
   }
 }

@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
+import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 
-const LoginPage = () => {
+const RegisterPage = () => {
   const inputPassRef = useRef<HTMLInputElement>(null)
   const [passVisible, setPassVisible] = useState(false)
 
@@ -20,14 +20,22 @@ const LoginPage = () => {
         style={{ maxWidth: '40rem' }}
       >
         <h1 className="text-2xl bg-red-500 p-2 text-gray-800 font-bold text-center uppercase">
-          Backer Login
+          Register
         </h1>
 
         <form action="" method="post">
-          <div className="my-9 px-8 text-gray-800">
+          <div className="my-9 px-8">
+            <input
+              type="text"
+              className="w-full block p-3 border-transparent border bg-gray-300 mt-2 text-gray-800 font-semibold placeholder-gray-500 outline-none focus:border-gray-500"
+              placeholder="Fullname"
+              autoComplete="name"
+              required
+            />
+
             <input
               type="email"
-              className="w-full block p-3 border-none bg-gray-300 mt-2 text-gray-800 font-semibold placeholder-gray-500"
+              className="w-full block p-3 border-transparent border bg-gray-300 mt-2 text-gray-800 font-semibold placeholder-gray-500 outline-none focus:border-gray-500"
               placeholder="Email"
               required
             />
@@ -35,10 +43,10 @@ const LoginPage = () => {
             <div className="relative bg-gray-300 mt-2 text-gray-800">
               <input
                 type="password"
-                className="w-full block p-3 border-none font-semibold bg-transparent placeholder-gray-500"
+                className="w-full block p-3 border-transparent border font-semibold bg-transparent placeholder-gray-500 outline-none focus:border-gray-500"
                 placeholder="Password"
-                ref={inputPassRef}
                 minLength={6}
+                ref={inputPassRef}
                 required
               />
               <button
@@ -49,21 +57,12 @@ const LoginPage = () => {
               </button>
             </div>
 
-            <label className="block mt-4">
-              <input type="checkbox" className="mr-2" /> Keep me signed in
-            </label>
-
-            <button className="p-2 w-full  bg-red-400 block mt-4 text-xl rounded transition-colors duration-200 hover:bg-red-300">
-              Login
+            <button className="p-2 w-full text-gray-800 bg-red-400 block mt-4 text-xl rounded transition-colors duration-200 hover:bg-red-300">
+              Register
             </button>
 
-            <div className="flex justify-between mt-6">
-              <Link to="/password-reset" className="">
-                Forget Password?
-              </Link>
-              <Link to="/register" className="">
-                Register
-              </Link>
+            <div className="flex justify-between mt-6 text-gray-800">
+              <Link href="/login">Already registered? Login</Link>
             </div>
           </div>
         </form>
@@ -72,4 +71,4 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage
+export default RegisterPage

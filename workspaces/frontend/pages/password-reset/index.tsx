@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 const PasswordResetPage = () => {
   return (
@@ -15,7 +15,7 @@ const PasswordResetPage = () => {
           <div className="my-9 px-8">
             <input
               type="email"
-              className="w-full block p-3 border-none bg-gray-300 mt-2 text-gray-800 font-semibold placeholder-gray-500"
+              className="w-full block p-3 border-transparent border bg-gray-300 mt-2 text-gray-800 font-semibold placeholder-gray-500 outline-none focus:border-gray-500"
               placeholder="Email"
               required
             />
@@ -25,12 +25,8 @@ const PasswordResetPage = () => {
             </button>
 
             <div className="flex justify-between mt-6 text-gray-800">
-              <Link to="/login" className="">
-                Login
-              </Link>
-              <Link to="/register" className="">
-                Register
-              </Link>
+              <Link href="/login">Login</Link>
+              <Link href="/register">Register</Link>
             </div>
           </div>
         </form>
