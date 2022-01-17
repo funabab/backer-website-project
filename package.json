@@ -1,5 +1,5 @@
 {
-  "name": "backer-website-project",
+  "name": "baker-website-project",
   "version": "1.0.0",
   "workspaces": [
     "./workspaces/backend",
