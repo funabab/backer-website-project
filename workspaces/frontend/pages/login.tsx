@@ -53,7 +53,7 @@ const LoginPage = () => {
                 className="text-xl px-4 absolute right-0 bottom-0 top-0"
                 onClick={() => setPassVisible((visible) => !visible)}
               >
-                {passVisible ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
+                {passVisible ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
               </button>
             </div>
 
