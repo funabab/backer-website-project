@@ -1,6 +1,8 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
+import Logo from '../public/images/logo.png'
 
 const LoginPage = () => {
   const inputPassRef = useRef<HTMLInputElement>(null)
@@ -23,8 +25,10 @@ const LoginPage = () => {
           Backer Login
         </h1>
 
-        <div className="mt-5 mb-9 text-center">
-          <img src="/images/logo.png" className="w-24 inline" />
+        <div className="mt-5 mb-8 text-center">
+          <div className="w-24 h-24 mx-auto relative">
+            <Image src={Logo} layout="fill" objectFit="scale-down" />
+          </div>
         </div>
 
         <form action="" method="post">
