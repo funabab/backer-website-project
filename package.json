@@ -1,0 +1,20 @@
+{
+  "name": "backer-website-project",
+  "version": "1.0.0",
+  "workspaces": [
+    "./workspaces/backend",
+    "./workspaces/frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev -ws --if-present",
+    "build": "npm run build -ws --if-present"
+  },
+  "author": {
+    "name": "Funsho (funabab)",
+    "email": "cs.kwasu2019@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
+}
